@@ -7,7 +7,7 @@
   <p>
     <a href="https://crates.io/crates/rife"><img alt="Crates.io" src="https://img.shields.io/crates/v/rife.svg"></a>
     <a href="https://www.rust-lang.org"><img alt="Rust" src="https://img.shields.io/badge/rust-1.93.1-red.svg?logo=rust"></a>
-    <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPL-red.svg"></a>
+    <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-red.svg"></a>
     <a href="https://gitpod.io/#https://github.com/Jadiefication/Rife"><img alt="Suffer with Gitpod" src="https://img.shields.io/badge/Suffer%20with-Gitpod-908a85?logo=gitpod"></a>
 <a href="https://codecov.io/github/Rife-Framework/Rife" > 
  <img src="https://codecov.io/github/Rife-Framework/Rife/graph/badge.svg?token=YW4IFKF62X&status=0%"/> 
@@ -30,7 +30,7 @@ Quick links
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Code of Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - Support: [SUPPORT.md](SUPPORT.md)
-- License: GPL ([LICENSE](LICENSE))
+- License: MIT ([LICENSE](LICENSE))
 - Wiki: [BloatWiki](https://deepwiki.com/Rife-Framework/Rife)
 
 ## Tech Stack
@@ -142,4 +142,4 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) and [COD
 
 ## License
 
-[GPL](LICENSE) — © 2026 Jadiefication
+[MIT](LICENSE) — © 2026 Jadiefication
