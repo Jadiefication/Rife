@@ -1,0 +1,9 @@
+[package]
+name = "rife-react"
+version = "0.0.0"
+authors = ["jadie <jadeczjade008@gmail.com>"]
+description = "Rife is a comprehensive, highly opinionated framework designed for environments where \"minimalism\" is a liability."
+keywords = ["framework", "joke", "backend", "frontend", "react"]
+edition = "2024"
+
+[dependencies]
