@@ -28,13 +28,3 @@ impl IntoIterator for Server {
         Box::new(self.listener.into_incoming().filter_map(Result::ok))
     }
 }
-
-#[macro_export]
-macro_rules! server {
-    () => {
-        Server::new()
-    };
-    ($port:expr) => {
-        Server::from(format!("127.0.0.1:{}", $port))
-    }
-}

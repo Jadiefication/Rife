@@ -7,3 +7,4 @@ keywords = ["framework", "joke", "backend"]
 edition = "2024"
 
 [dependencies]
+tokio = { version = "1.52.1", features = ["rt"] }
