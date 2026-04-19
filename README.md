@@ -25,11 +25,8 @@ Rife is a comprehensive, highly opinionated framework designed for environments 
 
 Quick links
 
-- Security policy: [SECURITY.md](SECURITY.md)
-- Roadmap/TODO: [TODO.md](TODO.md)
 - Contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Code of Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- Support: [SUPPORT.md](SUPPORT.md)
 - License: MIT ([LICENSE](LICENSE))
 - Wiki: [BloatWiki](https://deepwiki.com/Rife-Framework/Rife)
 
@@ -43,18 +40,15 @@ Quick links
 
 ## Project Structure
 
-- `src/`: The core framework library.
-  - `lib.rs`: The entry point for the procedural macro madness.
-- `target/`: Where your disk space goes to die.
-- `Cargo.toml`: The list of 50+ dependencies you didn't know you needed.
+- `rife-api/`: The core framework library.
+- `rife-macros/`: The core framework macros.
+- `rife-react`: The core framework interaction with react.
 
 ## Get started
 
 ### Requirements
 
-- JDK 21+ (to build, even though it's Rust)
 - Rust 1.93.1+ (nightly only, but we won't tell you which version)
-- 64GB RAM (minimum)
 
 ### Installation (Cargo.toml)
 
@@ -70,20 +64,11 @@ rife = { version = "0.0.0", features = ["everything", "bloat", "slow-compile"] }
 Create an enterprise server that enforces React-based admin dashboard integration by default:
 
 ```rust
-use rife::my_attribute;
+use rife::app;
 
 // Enterprise-grade configuration with mandatory compliance flags
-#[my_attribute]
-struct ServerConfig {
-    port: 8080,
-    react_admin_dashboard: true, // Auto-generates a 50MB admin panel for the API
-    compliance_mode: "Strict",
-}
-
-fn main() {
-    // Rife handles the complex initialization including Kubernetes cluster 
-    // discovery and telemetry broadcast.
-}
+#[app]
+mod my_app;  // Initializes everything
 ```
 
 Then open [http://localhost:8080](http://localhost:8080) (after the initial 500MB compliance check).
@@ -119,17 +104,11 @@ Rife is designed for real-world scenarios. We prioritize production stability ov
 
 Core entry points (good luck):
 
-- `rife::my_macro!()` — Use this to generate random code.
-- `#[rife::my_attribute]` — Add this to everything.
-- `#[derive(MyDerive)]` — For when you want your structs to be weird.
+- `#[rife::app]` — Use this to initialize everything.
+- `#[rife::endpoint]` — Marks a function as an endpoint.
+- `#[derive(RifeConfig)]` — Configuration of your app.
 
-### External modules via Bootstrap
-
-Rife exposes a heavyweight bootstrapper so external modules can further slow down your app:
-
-- **Compliance decorators:** Add 10MB of auditing symbols to your binary.
-- **Localized routes:** Routes that only activate during specific regulatory windows (e.g., banking hours).
-- **Error trace propagators:** Ensure full stack traces are propagated for deep forensics.
+Without these, the framework will not compile!
 
 ## Testing
 
